@@ -13,25 +13,24 @@ export default function CollectionsGallery() {
     <div className="min-h-screen bg-[#FAF7F0]">
       <div className="max-w-7xl mx-auto px-8 py-16">
         {/* Header Section */}
-        <div className="flex justify-between items-start mb-12">
+        <div className="flex justify-between items-start mb-8">
           <div className="flex-1">
-            <h1 className="text-6xl font-light text-[#3E2A1F] mb-4 leading-tight" style={{ fontFamily: 'serif' }}>
-              Collections Of Paintings<br />
-              Worth To Buy
+            <h1 className="text-3xl font-light text-[#3E2A1F] mb-3 leading-tight" style={{ fontFamily: 'serif' }}>
+              Collections Of Paintings Worth To Buy
             </h1>
-            <div className="mt-6">
+            <div className="mt-4">
               <Image
                 src="/logo1.png"
                 alt="The Aesthete's Curve"
-                width={60}
-                height={60}
+                width={40}
+                height={40}
                 className="object-contain opacity-60"
               />
             </div>
           </div>
           
-          <div className="max-w-md pl-12">
-            <p className="text-[#7D6E5F] leading-relaxed font-light">
+          <div className="max-w-sm pl-8">
+            <p className="text-[#7D6E5F] text-sm leading-relaxed font-light">
               Lorem ipsum dolor opsoit amet cons ectetur 
               adipi scing elit, sed do eiusmod tempor 
               incididunt ut labore
@@ -41,7 +40,7 @@ export default function CollectionsGallery() {
 
 
         {/* Paintings Grid */}
-        <div className="grid grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10">
           {paintings.map((painting) => (
             <div
               key={painting.id}
@@ -58,12 +57,12 @@ export default function CollectionsGallery() {
               }}
             >
               <div className={`overflow-hidden rounded-lg shadow-lg bg-white/80 border border-[#E8DFD3] ${painting.available ? 'hover:shadow-xl' : ''} transition-shadow relative`}>
-                <div className="aspect-[4/3] relative overflow-hidden">
+                <div className="aspect-square relative overflow-hidden">
                   <Image
                     src={painting.image}
                     alt={painting.title}
-                    width={400}
-                    height={300}
+                    width={500}
+                    height={500}
                     className={`object-cover w-full h-full ${painting.available ? 'group-hover:scale-105' : 'opacity-50'} transition-transform duration-300`}
                   />
                   {!painting.available && (
@@ -74,14 +73,14 @@ export default function CollectionsGallery() {
                     </div>
                   )}
                 </div>
-                <div className="p-4">
-                  <h3 className={`font-light text-lg mb-1 ${painting.available ? 'text-[#3E2A1F]' : 'text-gray-400'}`}>
+                <div className="p-5">
+                  <h3 className={`font-light text-xl mb-2 ${painting.available ? 'text-[#3E2A1F]' : 'text-gray-400'}`}>
                     {painting.title}
                   </h3>
-                  <p className={`text-sm font-light mb-2 ${painting.available ? 'text-[#7D6E5F]' : 'text-gray-400'}`}>
+                  <p className={`text-base font-light mb-3 ${painting.available ? 'text-[#7D6E5F]' : 'text-gray-400'}`}>
                     {painting.artist}
                   </p>
-                  <p className={`font-light text-xl ${painting.available ? 'text-[#5C4033]' : 'text-gray-400 line-through'}`}>
+                  <p className={`font-light text-2xl ${painting.available ? 'text-[#5C4033]' : 'text-gray-400 line-through'}`}>
                     {painting.price}
                   </p>
                 </div>
