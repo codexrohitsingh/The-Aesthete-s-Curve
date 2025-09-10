@@ -28,13 +28,13 @@ export default function RelatedProducts({ currentTitle }: RelatedProductsProps) 
   };
 
   return (
-    <div className="bg-[#FAF7F0] py-16">
-      <div className="max-w-4xl mx-auto px-8">
-        <h2 className="text-3xl font-light text-[#3E2A1F] mb-8 text-center" style={{ fontFamily: 'serif' }}>
+    <div className="bg-[#FAF7F0] py-8 sm:py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-8">
+        <h2 className="text-2xl sm:text-3xl font-light text-[#3E2A1F] mb-6 sm:mb-8 text-center" style={{ fontFamily: 'serif' }}>
           You May Also Like
         </h2>
         
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {otherPaintings.map((painting) => (
             <div
               key={painting.id}
@@ -51,9 +51,9 @@ export default function RelatedProducts({ currentTitle }: RelatedProductsProps) 
                     className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="text-[#3E2A1F] font-light text-lg mb-1">{painting.title}</h3>
-                  <p className="text-[#5C4033] font-light text-xl">{painting.price}</p>
+                <div className="p-3 sm:p-4">
+                  <h3 className="text-[#3E2A1F] font-light text-base sm:text-lg mb-1">{painting.title}</h3>
+                  <p className="text-[#5C4033] font-light text-lg sm:text-xl">{painting.price}</p>
                 </div>
               </div>
             </div>

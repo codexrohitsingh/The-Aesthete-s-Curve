@@ -9,15 +9,15 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-[#FAF7F0] py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-light text-[#3E2A1F] mb-8" style={{ fontFamily: 'serif' }}>
+      <div className="min-h-screen bg-[#FAF7F0] py-8 sm:py-12">
+        <div className="max-w-4xl mx-auto text-center px-4">
+          <h1 className="text-3xl sm:text-4xl font-light text-[#3E2A1F] mb-6 sm:mb-8" style={{ fontFamily: 'serif' }}>
             Your Cart is Empty
           </h1>
-          <p className="text-[#7D6E5F] mb-8">Add some beautiful paintings to your collection</p>
+          <p className="text-[#7D6E5F] mb-6 sm:mb-8 text-sm sm:text-base">Add some beautiful paintings to your collection</p>
           <Link 
             href="/"
-            className="inline-block bg-[#5C4033] text-[#FAF7F0] px-8 py-3 rounded-full hover:bg-[#3E2A1F] transition-colors font-light"
+            className="inline-block bg-[#5C4033] text-[#FAF7F0] px-6 sm:px-8 py-2.5 sm:py-3 rounded-full hover:bg-[#3E2A1F] transition-colors font-light text-sm sm:text-base"
           >
             Browse Collection
           </Link>
@@ -27,19 +27,19 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAF7F0] py-12">
-      <div className="max-w-6xl mx-auto px-8">
-        <h1 className="text-4xl font-light text-[#3E2A1F] mb-8" style={{ fontFamily: 'serif' }}>
+    <div className="min-h-screen bg-[#FAF7F0] py-6 sm:py-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-8">
+        <h1 className="text-3xl sm:text-4xl font-light text-[#3E2A1F] mb-6 sm:mb-8" style={{ fontFamily: 'serif' }}>
           Shopping Cart
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
           {/* Cart Items */}
           <div className="lg:col-span-2">
             {items.map((item) => (
-              <div key={item.id} className="bg-white/80 rounded-lg shadow-lg p-6 mb-4 border border-[#E8DFD3]">
-                <div className="flex gap-6">
-                  <div className="relative w-32 h-32 flex-shrink-0">
+              <div key={item.id} className="bg-white/80 rounded-lg shadow-lg p-4 sm:p-6 mb-4 border border-[#E8DFD3]">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+                  <div className="relative w-full sm:w-32 h-48 sm:h-32 flex-shrink-0">
                     <Image
                       src={item.image}
                       alt={item.title}
@@ -49,10 +49,10 @@ export default function CartPage() {
                   </div>
                   
                   <div className="flex-1">
-                    <h3 className="text-xl font-light text-[#3E2A1F] mb-2">{item.title}</h3>
-                    <p className="text-[#7D6E5F] text-sm mb-1">Frame: {item.frameColor}</p>
-                    <p className="text-[#7D6E5F] text-sm mb-3">Package: {item.deliveryPackage}</p>
-                    <p className="text-[#5C4033] text-lg font-light mb-3">{item.price}</p>
+                    <h3 className="text-lg sm:text-xl font-light text-[#3E2A1F] mb-2">{item.title}</h3>
+                    <p className="text-[#7D6E5F] text-xs sm:text-sm mb-1">Frame: {item.frameColor}</p>
+                    <p className="text-[#7D6E5F] text-xs sm:text-sm mb-3">Package: {item.deliveryPackage}</p>
+                    <p className="text-[#5C4033] text-base sm:text-lg font-light mb-3">{item.price}</p>
                     
                     <button
                       onClick={() => removeFromCart(item.id)}
@@ -68,8 +68,8 @@ export default function CartPage() {
 
           {/* Order Summary */}
           <div className="lg:col-span-1">
-            <div className="bg-white/80 rounded-lg shadow-lg p-6 border border-[#E8DFD3] sticky top-24">
-              <h2 className="text-2xl font-light text-[#3E2A1F] mb-6" style={{ fontFamily: 'serif' }}>
+            <div className="bg-white/80 rounded-lg shadow-lg p-4 sm:p-6 border border-[#E8DFD3] lg:sticky lg:top-24">
+              <h2 className="text-xl sm:text-2xl font-light text-[#3E2A1F] mb-4 sm:mb-6" style={{ fontFamily: 'serif' }}>
                 Order Summary
               </h2>
               
@@ -99,7 +99,7 @@ export default function CartPage() {
                   navigator.clipboard.writeText(totalMessage);
                   window.open('https://ig.me/m/aesthete.s_curve', '_blank');
                 }}
-                className="w-full bg-[#5C4033] text-[#FAF7F0] px-6 py-3 rounded-full hover:bg-[#3E2A1F] transition-colors font-light mb-3"
+                className="w-full bg-[#5C4033] text-[#FAF7F0] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-[#3E2A1F] transition-colors font-light mb-3 text-sm sm:text-base"
               >
                 Checkout via Instagram
               </button>
@@ -114,7 +114,7 @@ export default function CartPage() {
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(totalMessage)}`;
                   window.open(whatsappUrl, '_blank');
                 }}
-                className="w-full bg-white border-2 border-[#5C4033] text-[#5C4033] px-6 py-3 rounded-full hover:bg-[#FAF7F0] transition-colors font-light mb-3"
+                className="w-full bg-white border-2 border-[#5C4033] text-[#5C4033] px-4 sm:px-6 py-2.5 sm:py-3 rounded-full hover:bg-[#FAF7F0] transition-colors font-light mb-3 text-sm sm:text-base"
               >
                 Checkout via WhatsApp
               </button>

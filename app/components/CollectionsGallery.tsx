@@ -11,11 +11,11 @@ export default function CollectionsGallery() {
 
   return (
     <div className="min-h-screen bg-[#FAF7F0]">
-      <div className="max-w-7xl mx-auto px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 py-8 sm:py-16">
         {/* Header Section */}
-        <div className="flex justify-between items-start mb-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start mb-6 sm:mb-8 gap-4">
           <div className="flex-1">
-            <h1 className="text-3xl font-light text-[#3E2A1F] mb-3 leading-tight" style={{ fontFamily: 'serif' }}>
+            <h1 className="text-2xl sm:text-3xl font-light text-[#3E2A1F] mb-3 leading-tight" style={{ fontFamily: 'serif' }}>
               Collections Of Paintings Worth To Buy
             </h1>
             <div className="mt-4">
@@ -29,8 +29,8 @@ export default function CollectionsGallery() {
             </div>
           </div>
           
-          <div className="max-w-sm pl-8">
-            <p className="text-[#7D6E5F] text-sm leading-relaxed font-light">
+          <div className="max-w-full lg:max-w-sm lg:pl-8">
+            <p className="text-[#7D6E5F] text-xs sm:text-sm leading-relaxed font-light">
               Lorem ipsum dolor opsoit amet cons ectetur 
               adipi scing elit, sed do eiusmod tempor 
               incididunt ut labore
@@ -40,7 +40,7 @@ export default function CollectionsGallery() {
 
 
         {/* Paintings Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-10">
           {paintings.map((painting) => (
             <div
               key={painting.id}
@@ -73,14 +73,14 @@ export default function CollectionsGallery() {
                     </div>
                   )}
                 </div>
-                <div className="p-5">
-                  <h3 className={`font-light text-xl mb-2 ${painting.available ? 'text-[#3E2A1F]' : 'text-gray-400'}`}>
+                <div className="p-3 sm:p-5">
+                  <h3 className={`font-light text-base sm:text-xl mb-1 sm:mb-2 ${painting.available ? 'text-[#3E2A1F]' : 'text-gray-400'}`}>
                     {painting.title}
                   </h3>
-                  <p className={`text-base font-light mb-3 ${painting.available ? 'text-[#7D6E5F]' : 'text-gray-400'}`}>
+                  <p className={`text-sm sm:text-base font-light mb-2 sm:mb-3 ${painting.available ? 'text-[#7D6E5F]' : 'text-gray-400'}`}>
                     {painting.artist}
                   </p>
-                  <p className={`font-light text-2xl ${painting.available ? 'text-[#5C4033]' : 'text-gray-400 line-through'}`}>
+                  <p className={`font-light text-lg sm:text-2xl ${painting.available ? 'text-[#5C4033]' : 'text-gray-400 line-through'}`}>
                     {painting.price}
                   </p>
                 </div>
