@@ -92,7 +92,7 @@ export default function CartPage() {
               <button
                 onClick={() => {
                   const message = items.map(item => 
-                    `${item.title} (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) × ${item.quantity} - ${item.price}`
+                    `${item.title} (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) - ${item.price}`
                   ).join('\n');
                   const totalMessage = `Order Summary:\n${message}\n\nTotal: ${getTotalPrice()}`;
                   
@@ -107,7 +107,7 @@ export default function CartPage() {
               <button
                 onClick={() => {
                   const message = items.map(item => 
-                    `${item.title} (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) × ${item.quantity} - ${item.price}`
+                    `${item.title} (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) - ${item.price}`
                   ).join('\n');
                   const totalMessage = `Order Summary:\n${message}\n\nTotal: ${getTotalPrice()}`;
                   const phoneNumber = '917856937007';
