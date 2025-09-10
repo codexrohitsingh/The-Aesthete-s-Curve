@@ -54,30 +54,12 @@ export default function CartPage() {
                     <p className="text-[#7D6E5F] text-sm mb-3">Package: {item.deliveryPackage}</p>
                     <p className="text-[#5C4033] text-lg font-light mb-3">{item.price}</p>
                     
-                    <div className="flex items-center gap-4">
-                      <div className="flex items-center gap-2">
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                          className="w-8 h-8 rounded-full border border-[#E8DFD3] flex items-center justify-center hover:bg-[#FAF7F0]"
-                        >
-                          -
-                        </button>
-                        <span className="px-3">{item.quantity}</span>
-                        <button
-                          onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                          className="w-8 h-8 rounded-full border border-[#E8DFD3] flex items-center justify-center hover:bg-[#FAF7F0]"
-                        >
-                          +
-                        </button>
-                      </div>
-                      
-                      <button
-                        onClick={() => removeFromCart(item.id)}
-                        className="text-red-500 hover:text-red-700 text-sm"
-                      >
-                        Remove
-                      </button>
-                    </div>
+                    <button
+                      onClick={() => removeFromCart(item.id)}
+                      className="text-red-500 hover:text-red-700 text-sm"
+                    >
+                      Remove
+                    </button>
                   </div>
                 </div>
               </div>
@@ -94,10 +76,8 @@ export default function CartPage() {
               <div className="space-y-3 mb-6">
                 {items.map((item) => (
                   <div key={item.id} className="flex justify-between text-sm">
-                    <span className="text-[#7D6E5F]">{item.title} × {item.quantity}</span>
-                    <span className="text-[#5C4033]">
-                      ₹{(parseFloat(item.price.replace('₹', '').replace(',', '')) * item.quantity).toFixed(2)}
-                    </span>
+                    <span className="text-[#7D6E5F]">{item.title}</span>
+                    <span className="text-[#5C4033]">{item.price}</span>
                   </div>
                 ))}
               </div>
