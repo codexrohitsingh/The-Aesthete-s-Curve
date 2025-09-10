@@ -64,8 +64,8 @@ export default function PaintingPurchase({
           One step to receive your painting...
         </h2>
 
-        <div className="flex flex-col items-center mb-6 sm:mb-8">
-          <div className="relative w-64 h-64 sm:w-80 sm:h-80">
+        <div className="flex flex-col items-center mb-8 sm:mb-10">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 mb-8">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1 h-8 sm:h-12 bg-[#C4B5A0]"></div>
             <div className="absolute top-8 sm:top-12 left-1/2 transform -translate-x-1/2 w-32 sm:w-40 h-0.5 bg-[#C4B5A0]"></div>
             <div className="absolute top-8 sm:top-12 left-1/2 transform -translate-x-1/2">
@@ -75,14 +75,14 @@ export default function PaintingPurchase({
                   alt={title}
                   width={320}
                   height={320}
-                  className="rounded-sm shadow-xl object-cover w-56 h-56 sm:w-80 sm:h-80"
+                  className="rounded-sm shadow-xl object-contain w-56 h-56 sm:w-80 sm:h-80"
                 />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="text-center mb-4 sm:mb-6">
+        <div className="text-center mb-4 sm:mb-6 mt-4">
           <h1 className="text-2xl sm:text-3xl font-light mb-2 text-[#3E2A1F]" style={{ fontFamily: 'serif' }}>{title}</h1>
           <p className="text-[#7D6E5F] font-light text-sm sm:text-base">
             8 inches × 8 inches • Wood & hardboard

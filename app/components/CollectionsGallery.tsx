@@ -57,13 +57,13 @@ export default function CollectionsGallery() {
               }}
             >
               <div className={`overflow-hidden rounded-lg shadow-lg bg-white/80 border border-[#E8DFD3] ${painting.available ? 'hover:shadow-xl' : ''} transition-shadow relative`}>
-                <div className="aspect-square relative overflow-hidden">
+                <div className="aspect-square relative overflow-hidden bg-gray-50">
                   <Image
                     src={painting.image}
                     alt={painting.title}
                     width={500}
                     height={500}
-                    className={`object-cover w-full h-full ${painting.available ? 'group-hover:scale-105' : 'opacity-50'} transition-transform duration-300`}
+                    className={`object-contain w-full h-full ${painting.available ? 'group-hover:scale-105' : 'opacity-50'} transition-transform duration-300`}
                   />
                   {!painting.available && (
                     <div className="absolute inset-0 bg-gray-500/40 flex items-center justify-center">
