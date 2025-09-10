@@ -72,7 +72,6 @@ const defaultProducts: Product[] = [
 
 export function ProductsProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>(defaultProducts);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // Load products from localStorage on mount
@@ -85,7 +84,6 @@ export function ProductsProvider({ children }: { children: ReactNode }) {
           console.error('Failed to parse saved products:', e);
         }
       }
-      setIsLoaded(true);
     }
   }, []);
 

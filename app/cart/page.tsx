@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export default function CartPage() {
-  const { items, removeFromCart, updateQuantity, getTotalPrice, clearCart } = useCart();
+  const { items, removeFromCart, getTotalPrice, clearCart } = useCart();
 
   if (items.length === 0) {
     return (

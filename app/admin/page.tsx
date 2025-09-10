@@ -4,7 +4,7 @@ import { useUser } from '@clerk/nextjs';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { useProducts } from '../context/ProductsContext';
+import { useProducts, Product } from '../context/ProductsContext';
 
 export default function AdminPage() {
   const { user, isLoaded } = useUser();
@@ -28,7 +28,7 @@ export default function AdminPage() {
     }
   }, [user, isLoaded, router]);
 
-  const startEdit = (product: any) => {
+  const startEdit = (product: Product) => {
     setEditingId(product.id);
     setEditForm({
       title: product.title,
@@ -75,7 +75,7 @@ export default function AdminPage() {
   };
 
   const addNewProduct = () => {
-    const newProduct = {
+    const newProduct: Product = {
       id: Math.max(...products.map(p => p.id)) + 1,
       title: 'New Painting',
       artist: 'The Aesthete\'s Curve',
