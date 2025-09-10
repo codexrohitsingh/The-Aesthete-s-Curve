@@ -26,6 +26,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The Aesthete's Curve",
   description: "Collections of Paintings Worth To Buy",
+  icons: {
+    icon: '/logo1.png',
+    shortcut: '/logo1.png',
+    apple: '/logo1.png',
+  },
 };
 
 export default function RootLayout({
