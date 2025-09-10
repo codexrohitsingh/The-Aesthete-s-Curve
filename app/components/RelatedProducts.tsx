@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
+import { useProducts } from '../context/ProductsContext';
 
 interface RelatedProductsProps {
   currentTitle?: string;
@@ -9,51 +10,8 @@ interface RelatedProductsProps {
 
 export default function RelatedProducts({ currentTitle }: RelatedProductsProps) {
   const router = useRouter();
-
-  const paintings = [
-    {
-      id: 1,
-      title: 'Ethereal Dreams',
-      artist: 'The Aesthete\'s Curve',
-      image: '/logo1.png',
-      price: '₹2,499'
-    },
-    {
-      id: 2,
-      title: 'Golden Hour',
-      artist: 'The Aesthete\'s Curve',
-      image: '/logo1.png',
-      price: '₹3,299'
-    },
-    {
-      id: 3,
-      title: 'Serene Landscapes',
-      artist: 'The Aesthete\'s Curve',
-      image: '/logo1.png',
-      price: '₹4,599'
-    },
-    {
-      id: 4,
-      title: 'Abstract Emotions',
-      artist: 'The Aesthete\'s Curve',
-      image: '/logo1.png',
-      price: '₹3,999'
-    },
-    {
-      id: 5,
-      title: 'Nature\'s Symphony',
-      artist: 'The Aesthete\'s Curve',
-      image: '/logo1.png',
-      price: '₹5,299'
-    },
-    {
-      id: 6,
-      title: 'Urban Poetry',
-      artist: 'The Aesthete\'s Curve',
-      image: '/logo1.png',
-      price: '₹2,999'
-    }
-  ];
+  const { products } = useProducts();
+  const paintings = products;
 
   // Filter out the current painting and show only 3 others
   const otherPaintings = paintings

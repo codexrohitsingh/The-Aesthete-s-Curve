@@ -9,11 +9,14 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
+  useUser,
 } from '@clerk/nextjs';
 
 export default function Navbar() {
   const { getTotalItems } = useCart();
   const cartCount = getTotalItems();
+  const { user } = useUser();
+  const isAdmin = user?.primaryEmailAddress?.emailAddress === 'rs21rohit@gmail.com';
 
   return (
     <header className="px-8 py-6 flex items-center justify-between border-b border-[#E8DFD3] bg-[#FAF7F0]">
@@ -31,15 +34,17 @@ export default function Navbar() {
         <Link href="/" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
           home
         </Link>
-        <Link href="/#collections" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
+        <Link href="/products" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
           product
         </Link>
-        <Link href="#" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
-          services
+        <Link href="/about" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
+          about us
         </Link>
-        <Link href="#" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
-          contact
-        </Link>
+        {isAdmin && (
+          <Link href="/admin" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light border-l border-[#E8DFD3] pl-12">
+            admin
+          </Link>
+        )}
       </nav>
 
       <div className="flex items-center gap-4">
