@@ -73,19 +73,19 @@ const defaultProducts: Product[] = [
 export function ProductsProvider({ children }: { children: ReactNode }) {
   const [products, setProducts] = useState<Product[]>(defaultProducts);
 
-  useEffect(() => {
-    // Load products from localStorage on mount
-    if (typeof window !== 'undefined') {
-      const savedProducts = localStorage.getItem('adminProducts');
-      if (savedProducts) {
-        try {
-          setProducts(JSON.parse(savedProducts));
-        } catch (e) {
-          console.error('Failed to parse saved products:', e);
-        }
-      }
-    }
-  }, []);
+  // useEffect(() => {
+  //   // Load products from localStorage on mount
+  //   if (typeof window !== 'undefined') {
+  //     const savedProducts = localStorage.getItem('adminProducts');
+  //     if (savedProducts) {
+  //       try {
+  //         setProducts(JSON.parse(savedProducts));
+  //       } catch (e) {
+  //         console.error('Failed to parse saved products:', e);
+  //       }
+  //     }
+  //   }
+  // }, []);
 
   const updateProducts = (newProducts: Product[]) => {
     setProducts(newProducts);

@@ -94,7 +94,11 @@ export default function CartPage() {
                   const message = items.map(item => 
                     `${item.title} (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) - ${item.price}`
                   ).join('\n');
-                  const totalMessage = `Order Summary:\n${message}\n\nTotal: ${getTotalPrice()}`;
+                  // const messageImage = items.map(item=>{
+                  //   `${item.image}`
+                  // })
+                  // console.log(messageImage)
+                  const totalMessage = ` \n Order Summary:\n${message}\n\nTotal: ${getTotalPrice()}`;
                   
                   navigator.clipboard.writeText(totalMessage);
                   window.open('https://ig.me/m/aesthete.s_curve', '_blank');
@@ -107,9 +111,12 @@ export default function CartPage() {
               <button
                 onClick={() => {
                   const message = items.map(item => 
-                    `${item.title} (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) - ${item.price}`
+                    `${item.title}  (Frame: ${item.frameColor}, Package: ${item.deliveryPackage}) - ${item.price}`
                   ).join('\n');
-                  const totalMessage = `Order Summary:\n${message}\n\nTotal: ${getTotalPrice()}`;
+                  // const messageImage1 = items.map(item=>{
+                  //   `${item.image}`
+                  // })
+                  const totalMessage = ` Order Summary:\n${message}\n\nTotal: ${getTotalPrice()}`;
                   const phoneNumber = '917856937007';
                   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(totalMessage)}`;
                   window.open(whatsappUrl, '_blank');
