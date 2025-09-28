@@ -22,50 +22,50 @@ const ProductsContext = createContext<ProductsContextType | undefined>(undefined
 const defaultProducts: Product[] = [
   {
     id: 1,
-    title: 'Ethereal Dreams',
+    title: 'Kop Bhawan',
     artist: 'The Aesthete\'s Curve',
     image: '/logo2.jpeg',
-    price: '₹2,499',
+    price: '₹1,599',
     available: true
   },
   {
     id: 2,
-    title: 'Golden Hour',
+    title: 'Shiv Vivah',
     artist: 'The Aesthete\'s Curve',
     image: '/logo3.jpeg',
-    price: '₹3,299',
+    price: '₹899',
     available: true
   },
   {
     id: 3,
-    title: 'Serene Landscapes',
+    title: 'Krishna',
     artist: 'The Aesthete\'s Curve',
     image: '/logo4.jpeg',
-    price: '₹4,599',
+    price: '₹2,599',
     available: true
   },
   {
     id: 4,
-    title: 'Abstract Emotions',
+    title: 'Fish Madhubani Painting',
     artist: 'The Aesthete\'s Curve',
     image: '/logo5.jpeg',
-    price: '₹3,999',
+    price: '₹899',
     available: true
   },
   {
     id: 5,
-    title: 'Nature\'s Symphony',
+    title: 'Jagannath',
     artist: 'The Aesthete\'s Curve',
     image: '/logo6.jpeg',
-    price: '₹5,299',
+    price: '₹699',
     available: true
   },
   {
     id: 6,
-    title: 'Urban Poetry',
+    title: 'Bibbojaan',
     artist: 'The Aesthete\'s Curve',
     image: '/logo7.jpeg',
-    price: '₹2,999',
+    price: '₹599',
     available: true
   }
 ];

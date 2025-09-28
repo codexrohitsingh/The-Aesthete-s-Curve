@@ -93,7 +93,7 @@ export default function PaintingPurchase({
           <p className="text-3xl sm:text-4xl font-light text-[#3E2A1F]">{price}</p>
         </div>
 
-        <div className="mb-6 sm:mb-8">
+        {/* <div className="mb-6 sm:mb-8">
           <h3 className="text-xs sm:text-sm font-light mb-3 sm:mb-4 text-[#5C4033] tracking-wider">
             SELECT FRAME COLOR
           </h3>
@@ -112,7 +112,7 @@ export default function PaintingPurchase({
               />
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="mb-6 sm:mb-8">
           <h3 className="text-xs sm:text-sm font-light mb-3 sm:mb-4 text-[#5C4033] tracking-wider">
