@@ -17,7 +17,7 @@ export default function Navbar() {
   const { getTotalItems } = useCart();
   const cartCount = getTotalItems();
   const { user } = useUser();
-  const isAdmin = user?.primaryEmailAddress?.emailAddress === 'rs21rohit@gmail.com';
+  const isAdmin = user?.primaryEmailAddress?.emailAddress === 'shivankar023@gmail.com';
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
