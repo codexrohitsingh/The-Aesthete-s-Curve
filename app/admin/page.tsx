@@ -22,7 +22,7 @@ export default function AdminPage() {
   useEffect(() => {
     if (isLoaded) {
       // Check if user is authorized
-      if (!user || user.primaryEmailAddress?.emailAddress !== 'rs21rohit@gmail.com') {
+      if (!user || user.primaryEmailAddress?.emailAddress !== 'shivankar023@gmail.com') {
         router.push('/');
       }
     }
@@ -95,7 +95,7 @@ export default function AdminPage() {
     );
   }
 
-  if (!user || user.primaryEmailAddress?.emailAddress !== 'rs21rohit@gmail.com') {
+  if (!user || user.primaryEmailAddress?.emailAddress !== 'shivankar023@gmail.com') {
     return null;
   }
 
