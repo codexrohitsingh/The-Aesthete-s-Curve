@@ -150,7 +150,7 @@ export default function Navbar() {
               
               <SignedIn>
                 <div className="flex items-center gap-2">
-                  <span className="text-[#5C4033] font-light">Account</span>
+                  {/* <span className="text-[#5C4033] font-light">Account</span> */}
                   <UserButton afterSignOutUrl="/" />
                 </div>
               </SignedIn>
