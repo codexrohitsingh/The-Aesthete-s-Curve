@@ -24,7 +24,7 @@ const defaultProducts: Product[] = [
     id: 1,
     title: 'Ethereal Dreams',
     artist: 'The Aesthete\'s Curve',
-    image: '/logo1.png',
+    image: '/logo2.jpeg',
     price: '₹2,499',
     available: true
   },
@@ -32,7 +32,7 @@ const defaultProducts: Product[] = [
     id: 2,
     title: 'Golden Hour',
     artist: 'The Aesthete\'s Curve',
-    image: '/logo1.png',
+    image: '/logo3.jpeg',
     price: '₹3,299',
     available: true
   },
@@ -40,7 +40,7 @@ const defaultProducts: Product[] = [
     id: 3,
     title: 'Serene Landscapes',
     artist: 'The Aesthete\'s Curve',
-    image: '/logo1.png',
+    image: '/logo4.jpeg',
     price: '₹4,599',
     available: true
   },
@@ -48,7 +48,7 @@ const defaultProducts: Product[] = [
     id: 4,
     title: 'Abstract Emotions',
     artist: 'The Aesthete\'s Curve',
-    image: '/logo1.png',
+    image: '/logo5.jpeg',
     price: '₹3,999',
     available: true
   },
@@ -56,7 +56,7 @@ const defaultProducts: Product[] = [
     id: 5,
     title: 'Nature\'s Symphony',
     artist: 'The Aesthete\'s Curve',
-    image: '/logo1.png',
+    image: '/logo6.jpeg',
     price: '₹5,299',
     available: true
   },
@@ -64,7 +64,7 @@ const defaultProducts: Product[] = [
     id: 6,
     title: 'Urban Poetry',
     artist: 'The Aesthete\'s Curve',
-    image: '/logo1.png',
+    image: '/logo7.jpeg',
     price: '₹2,999',
     available: true
   }
