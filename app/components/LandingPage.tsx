@@ -23,9 +23,9 @@ export default function LandingPage() {
               Paintings Art
             </h1>
             <p className="text-[#7D6E5F] mb-6 sm:mb-8 leading-relaxed font-light text-sm sm:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+              {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-              enim ad minim veniam, quis nostrud.
+              enim ad minim veniam, quis nostrud. */}
             </p>
             <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-[#C4B5A0] text-[#3E2A1F] rounded-full hover:bg-[#B8A68E] transition-colors font-light text-sm sm:text-base">
               see projects
