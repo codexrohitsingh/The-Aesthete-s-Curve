@@ -31,9 +31,9 @@ export default function CollectionsGallery() {
           
           <div className="max-w-full lg:max-w-sm lg:pl-8">
             <p className="text-[#7D6E5F] text-xs sm:text-sm leading-relaxed font-light">
-              Lorem ipsum dolor opsoit amet cons ectetur 
+              {/* Lorem ipsum dolor opsoit amet cons ectetur 
               adipi scing elit, sed do eiusmod tempor 
-              incididunt ut labore
+              incididunt ut labore */}
             </p>
           </div>
         </div>
