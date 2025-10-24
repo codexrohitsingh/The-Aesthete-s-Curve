@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://the-aesthete-curve.vercel.app/
+
+# Sitemaps
+Sitemap: https://the-aesthete-curve.vercel.app/sitemap.xml
