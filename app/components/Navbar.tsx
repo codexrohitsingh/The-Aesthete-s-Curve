@@ -36,13 +36,13 @@ export default function Navbar() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 lg:gap-12">
           <Link href="/" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
-            HOME
+            Home
           </Link>
           <Link href="/products" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
-            PRODUCT
+            Product
           </Link>
           <Link href="/about" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light">
-            ABOUT US
+            About Us
           </Link>
           {isAdmin && (
             <Link href="/admin" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light border-l border-[#E8DFD3] pl-8 lg:pl-12">
