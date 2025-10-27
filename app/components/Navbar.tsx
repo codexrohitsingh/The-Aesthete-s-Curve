@@ -48,6 +48,7 @@ export default function Navbar() {
             <Link href="/admin" className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light border-l border-[#E8DFD3] pl-8 lg:pl-12">
             ADMIN
             </Link>
+            
           )}
         </nav>
 
