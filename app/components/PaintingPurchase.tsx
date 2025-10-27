@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useCart } from '../context/CartContext';
 
@@ -20,6 +20,9 @@ export default function PaintingPurchase({
   const [showToast, setShowToast] = useState(false);
   const [showCartToast, setShowCartToast] = useState(false);
   const { addToCart } = useCart();
+
+  // JSON-LD structured data for product is now handled at the page level
+  // This component focuses on the UI rendering only
 
   const frameColors = [
     { id: 'natural', color: '#E8DFD3', label: 'Natural' },

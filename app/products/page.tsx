@@ -1,4 +1,28 @@
 import CollectionsGallery from '../components/CollectionsGallery';
+import { Metadata } from 'next';
+
+// Import the seoConfig for reference
+import seoConfig from '../../next-seo.config';
+
+export const metadata: Metadata = {
+  title: 'Our Paintings Collection',
+  description: 'Explore our curated collection of premium paintings and traditional art pieces. Find the perfect artwork to enhance your living space.',
+  keywords: 'paintings collection, art gallery, premium paintings, traditional art, wall art, home decor',
+  openGraph: {
+    type: 'website',
+    title: 'Premium Paintings Collection | The Aesthete\'s Curve',
+    description: 'Browse our exclusive collection of handcrafted paintings and traditional art pieces. Each artwork tells a unique story.',
+    url: `${seoConfig.canonical}products`,
+    images: [
+      {
+        url: '/logo3.jpeg',
+        width: 1200,
+        height: 630,
+        alt: "The Aesthete's Curve Paintings Collection",
+      },
+    ],
+  },
+};
 
 export default function ProductsPage() {
   return (

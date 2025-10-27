@@ -1,7 +1,54 @@
 import Image from 'next/image';
+import { Metadata } from 'next';
+
+// Import the seoConfig for reference
+import seoConfig from '../../next-seo.config';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description: 'Learn about The Aesthete\'s Curve - our mission, values, and dedication to bringing exceptional artwork into your living spaces.',
+  keywords: 'about us, art gallery, painting collection, art mission, art curators, premium art',
+  openGraph: {
+    type: 'website',
+    title: 'About The Aesthete\'s Curve | Our Story & Mission',
+    description: 'Discover the story behind The Aesthete\'s Curve and our passion for curating fine paintings and traditional art.',
+    url: `${seoConfig.canonical}about`,
+    images: [
+      {
+        url: '/logo1.png',
+        width: 800,
+        height: 600,
+        alt: 'The Aesthete\'s Curve Logo',
+      },
+    ],
+  },
+};
+
+// Add JSON-LD script for organization
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: "The Aesthete's Curve",
+  url: 'https://the-aesthete-curve.vercel.app',
+  logo: 'https://the-aesthete-curve.vercel.app/logo1.png',
+  description: "The Aesthete's Curve is a curated collection of premium paintings and traditional art pieces. We are passionate about bringing exceptional artwork into your living spaces.",
+  sameAs: [
+    'https://instagram.com/theaesthetecurve',
+    'https://twitter.com/theaesthetecurve'
+  ],
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'IN'
+  }
+};
 
 export default function AboutPage() {
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
     <div className="min-h-screen bg-[#FAF7F0] py-8 sm:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         <div className="text-center mb-8 sm:mb-12">
@@ -70,5 +117,6 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }
