@@ -12,7 +12,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF7F0]">
+    <div className="max-h-screen full-width-container bg-[#FAF7F0]">
       {/* Hero Section */}
       <section className="px-4 sm:px-8 py-8 sm:py-16 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8">

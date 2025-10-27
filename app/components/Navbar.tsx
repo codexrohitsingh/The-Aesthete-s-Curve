@@ -108,21 +108,21 @@ export default function Navbar() {
               className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              home
+              Home
             </Link>
             <Link 
               href="/products" 
               className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              product
+              Product
             </Link>
             <Link 
               href="/about" 
               className="text-[#5C4033] hover:text-[#3E2A1F] transition-colors font-light"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              about us
+              About us
             </Link>
             {isAdmin && (
               <Link 

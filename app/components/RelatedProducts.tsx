@@ -28,7 +28,7 @@ export default function RelatedProducts({ currentTitle }: RelatedProductsProps) 
   };
 
   return (
-    <div className="bg-[#FAF7F0] py-8 sm:py-16">
+    <div className="py-8 sm:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         <h2 className="text-2xl sm:text-3xl font-light text-[#3E2A1F] mb-6 sm:mb-8 text-center" style={{ fontFamily: 'serif' }}>
           You May Also Like

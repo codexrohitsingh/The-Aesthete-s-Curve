@@ -32,7 +32,7 @@ export default function PaintingPurchase({
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF7F0] py-6 sm:py-12 relative">
+    <div className="py-6 sm:py-12 relative">
       {/* Toast Notifications */}
       {showToast && (
         <div className="fixed top-20 right-2 sm:right-4 bg-[#5C4033] text-[#FAF7F0] px-4 sm:px-6 py-3 sm:py-4 rounded-lg shadow-lg z-50 animate-fade-in max-w-[90vw] sm:max-w-sm">

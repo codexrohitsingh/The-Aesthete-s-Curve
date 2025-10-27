@@ -39,3 +39,13 @@ body {
 .animate-fade-in {
   animation: fade-in 0.3s ease-out;
 }
+
+.full-width-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-color: #FAF7F0;
+}
