@@ -9,7 +9,7 @@ export default function CartPage() {
 
   if (items.length === 0) {
     return (
-      <div className="min-h-screen bg-[#FAF7F0] py-8 sm:py-12">
+      <div className="min-h-screen  bg-[#FAF7F0] py-8 sm:py-12">
         <div className="max-w-4xl mx-auto text-center px-4">
           <h1 className="text-3xl sm:text-4xl font-light text-[#3E2A1F] mb-6 sm:mb-8" style={{ fontFamily: 'serif' }}>
             Your Cart is Empty
@@ -27,7 +27,7 @@ export default function CartPage() {
   }
 
   return (
-    <div className="min-h-screen bg-[#FAF7F0] py-6 sm:py-12">
+    <div className="min-h-screen full-width-container bg-[#FAF7F0] py-6 sm:py-12">
       <div className="max-w-6xl mx-auto px-4 sm:px-8">
         <h1 className="text-3xl sm:text-4xl font-light text-[#3E2A1F] mb-6 sm:mb-8" style={{ fontFamily: 'serif' }}>
           Shopping Cart

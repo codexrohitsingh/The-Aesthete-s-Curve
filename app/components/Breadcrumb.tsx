@@ -56,8 +56,8 @@ export default function Breadcrumb({ productTitle }: BreadcrumbProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <nav aria-label="Breadcrumb" className="py-2 px-4 sm:px-8   bg-[#FAF7F0] border-b border-[#E8DFD3]">
-        <ol className="flex flex-wrap items-center text-sm">
+      <nav aria-label="Breadcrumb" className="py-2 px-4 sm:px-8 full-width-container  bg-[#FAF7F0] border-b border-[#E8DFD3]">
+        <ol className="flex flex-wrap  items-center text-sm">
         {breadcrumbs.map((breadcrumb, index) => (
           <li key={breadcrumb.path} className="flex items-center">
             {index > 0 && (

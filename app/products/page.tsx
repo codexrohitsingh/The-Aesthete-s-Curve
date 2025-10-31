@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   return (
-    <div className="min-h-screen  bg-[#FAF7F0]">
+    <div className="min-h-screen full-width-container bg-[#FAF7F0]">
       <div className="max-w-7xl mx-auto px-8 py-12">
         <h1 className="text-5xl font-light text-[#3E2A1F] mb-4 text-center" style={{ fontFamily: 'serif' }}>
           Our Products

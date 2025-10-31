@@ -49,7 +49,7 @@ export default function AboutPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
-    <div className="min-h-screen bg-[#FAF7F0] py-8 sm:py-16">
+    <div className="min-h-screen full-width-container bg-[#FAF7F0] py-8 sm:py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-8">
         <div className="text-center mb-8 sm:mb-12">
           <Image
